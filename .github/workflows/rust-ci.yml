@@ -28,9 +28,9 @@ jobs:
           sudo apt install pkg-config libx11-dev libasound2-dev libudev-dev
           sudo apt install libxcb-randr0-dev libxcb-xtest0-dev libxcb-xinerama0-dev libxcb-shape0-dev libxcb-xkb-dev
           sudo apt install libxcb-render0-dev libxcb-xfixes0-dev libxcb1-dev
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: ${{ matrix.rust }}
@@ -70,7 +70,7 @@ jobs:
     name: ${{ matrix.os }} MPI
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup MPI
         uses: mpi4py/setup-mpi@v1
         with:

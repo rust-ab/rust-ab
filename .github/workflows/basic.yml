@@ -7,7 +7,7 @@ jobs:
     name: Check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
       - run: cargo check --release
 
@@ -15,7 +15,7 @@ jobs:
     name: Check visualization and bayesian
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
       - run: |
           sudo apt update
@@ -38,7 +38,7 @@ jobs:
     name: check ${{ matrix.os }} MPI
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup MPI
         uses: mpi4py/setup-mpi@v1
         with:
@@ -53,7 +53,7 @@ jobs:
     name: Rustfmt
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt
@@ -63,7 +63,7 @@ jobs:
     name: Clippy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: clippy
@@ -73,7 +73,7 @@ jobs:
     name: Clippy visualization
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt
@@ -98,7 +98,7 @@ jobs:
     name: clippy ${{ matrix.os }} MPI
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup MPI
         uses: mpi4py/setup-mpi@v1
         with:
